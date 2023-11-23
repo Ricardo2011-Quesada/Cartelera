@@ -10,44 +10,61 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
 @Slf4j
 public class CarteleraController {
-    
+
     @RequestMapping("/")
     public String page(Model model) {
         model.addAttribute("attribute", "value");
         return "index";
     }
+
     @GetMapping("/InicioSesion")
     public String InicioSesion(Model model) {
         model.addAttribute("attribute", "value");
         return "InicioSesion";
     }
-     @GetMapping("/Registro")
+
+    @GetMapping("/Registro")
     public String Registro(Model model) {
         model.addAttribute("attribute", "value");
         return "Registro";
     }
-     @GetMapping("/cartelera")
+
+    @GetMapping("/cartelera")
     public String cartelera(Model model) {
         model.addAttribute("attribute", "value");
         return "cartelera";
     }
-     @GetMapping("/Promociones")
+
+    @GetMapping("/Promociones")
     public String Promociones(Model model) {
         model.addAttribute("attribute", "value");
         return "Promociones";
     }
-         @GetMapping("/Dulceria")
+
+    @GetMapping("/Dulceria")
     public String Dulceria(Model model) {
         model.addAttribute("attribute", "value");
         return "Dulceria";
     }
-         @GetMapping("/CinePlus")
+
+    @GetMapping("/CinePlus")
     public String CinePlus(Model model) {
         model.addAttribute("attribute", "value");
         return "CinePlus";
+    }
+
+    @GetMapping("/Horarios")
+    public String Horarios(Model model) {
+        model.addAttribute("attribute", "value");
+        return "Horarios";
+    }
+
+    @GetMapping("/Carrito")
+    public String Carrito(Model model) {
+        model.addAttribute("attribute", "value");
+        return "Carrito";
     }
 }

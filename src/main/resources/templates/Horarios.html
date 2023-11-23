@@ -1,0 +1,130 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Cartelera</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" th:href="@{/}">
+                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/024/095/801/small_2x/cinema-film-tape-reel-free-png.png"
+                                         alt="Inicio" width="20" height="20"/> 
+                                    CinemaPlus
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/cartelera}">Peliculas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/Promociones}">Promociones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/Dulceria}">Dulcería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/CinePlus}">CinePlus+</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex">
+                            <div class="m-0 border-0" >
+                                   <a class="btn "th:href="@{/Carrito}">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/4305/4305700.png"
+                                         alt="Inicio" width="20" height="20"/>                                     
+                                </a>
+                                <a class="btn btn btn-danger" th:href="@{/Registro}">Regitrarse</a>
+                                <a class="btn btn btn-danger" th:href="@{/InicioSesion}">Iniciar sesion</a> 
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="navbar navbar-expand-lg" style="background-color: red; height:  80px"> 
+            <img src="../image/horario.png" width="100%" height="78px"/>          
+        </div>
+        <div class="navbar navbar-expand-lg" style="background-color: gray; height:  85px">
+            <div class="row container">
+                <div>
+                    <p style="font-size: 25px; padding-top: 15px">Centro Comercial Laribera de Belen - Costa Rica</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 vh-100 p-3 justify-content-center" style="background-color:white; border-right:1px solid gray;">
+                    <div class="row">
+                        <div style="color: black; padding-top: 150px">
+                            <h3 class="col" style="border-bottom: 1px solid black;"> Direccion.</h3>
+                            <p class="col">Centro Comercial</p>
+                            <p class="col">La Ribera de Belen</p>
+                            <h3 class="col" style="border-bottom: 1px solid black;">Telefono</h3>
+                            <p class="col">xxxxxxxx</p>
+                        </div>  
+                    </div>
+
+                </div>
+                <div class="col-lg-9 vh-100 p-3 align-items-center">
+                    <div class="container" style="padding-bottom: 3%">
+                        <div class="row"style=" border-bottom: 1px solid black;">
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ul style="color: black; text-decoration: black " class="breadcrumb">
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Dom</a></li>    
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Lun</a></li>   
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Mar</a></li>   
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Mie</a></li>   
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Jue</a></li>   
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Vie</a></li>   
+                                    <li class="breadcrumb-item btn" style="padding-right: 55px " ><a class="nav-link" href="#">Sab</a></li>   
+                                </ul>                                
+                            </nav>                            
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" width="400px" height="520px"/>
+                            </div>
+                            <div class="col-6 align-items-center">
+                                <h3 style="border-bottom: 1px solid black; margin-bottom: 18%"> Pelicula.</h3>
+                                <div class="row">
+
+                                    <ol style="color: dodgerblue; text-decoration: black " class="breadcrumb">
+                                        <li class="breadcrumb-item" style="padding-right: 55px " > DIG DOB 
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                    </ol>
+
+                                    <ol style="color: dodgerblue; text-decoration: black " class="breadcrumb">
+                                        <li class="breadcrumb-item" style="padding-right: 55px;" > DOB    
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                    </ol>
+                                    <ol style="color: dodgerblue; text-decoration: black " class="breadcrumb">
+                                        <li class="breadcrumb-item" style="padding-right: 55px " > DIG SUB 
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                            <button type="button" class="btn btn-secondary">12:30</button>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

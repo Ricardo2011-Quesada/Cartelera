@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Registro</title>
+
+        <!-- Agrega la referencia a Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 vh-100 p-3 align-items-center">
+                    <div class="container">
+                        <header>
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse">
+                                        <ul class="navbar-nav mb-2 mb-lg-0 ">
+                                            <li class="d-flex nav-item">
+                                                <a class="nav-link active" aria-current="page" th:href="@{/}">
+                                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/024/095/801/small_2x/cinema-film-tape-reel-free-png.png"
+                                                         alt="Inicio" width="20" height="20"/> 
+                                                    CinemaPlus
+                                                </a>
+                                            </li>                                            
+                                        </ul>  
+                                    </div>
+                                </div>
+                            </nav>
+                        </header>
+                        <div style="padding-top: 7%">
+                            <h3 style="border-bottom: 1px solid black">Metodos de pago</h3>
+                            <form>
+                                <div class="row">
+                                    <label class="form-label">Pago con:</label>
+                                    <div class="form-check col-sm-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                tarjeta
+                                            </label>
+                                    </div>
+                                    <div class="form-check col-sm-2">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Transferencia
+                                            </label>
+                                    </div>
+                                </div>                         
+                                <div>
+                                    <label for="tarjeta">Numero de tarjeta</label>
+                                    <input type="text" class="form-control" id="tarjeta" name="tarjeta" required/>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="vencimiento">Fecha de vencimiento</label>
+                                        <input type="text" class="form-control" id="vencimiento" name="vencimiento" required/>
+                                    </div>
+                                    <div class="col">
+                                        <label for="CVV">CVV</label>
+                                        <input type="text" class="form-control" id="CVV" name="CVV" required/>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <button class="col btn btn-lg btn-success">Pagar</button>
+                                </div>
+                                <P style="color: gray">Sus datos personales se utilizan para procesar su pedido, respaldar su experencia en este sitio web y para otros fines descritos en nuestra politica de privacidad</P>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 vh-100 p-3 align-items-center" style="background: whitesmoke; border-right:1px solid gray;">
+                    <div class="container">
+                        <header>
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse justify-content-center">
+                                        <ul class="navbar-nav mb-2 mb-lg-0 ">
+                                            <li class="nav-item">
+                                                <a class="nav-link" th:href="@{/cartelera}">Peliculas</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" th:href="@{/Promociones}">Promociones</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" th:href="@{/Dulceria}">Dulcería</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" th:href="@{/CinePlus}">CinePlus+</a>
+                                            </li>
+                                        </ul>  
+                                    </div>
+                                </div>
+                            </nav>
+                        </header>                      
+                        <div style="padding-top: 7%">
+                            <h3 style="border-bottom: 1px solid black">Resumen del pedido</h3>
+                            <div class="card text-center" style="border-bottom: 1px solid black">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" width="100px" height="100px"/>
+                                        </div>
+                                        <div class="col">
+                                            <p class="card-text">Combo personal: Palomitas y refresco medianos</p>     
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <br/>
+                            </div>
+                            <br/>
+                            <div  style="border-bottom: 1px solid black;">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control " id="descuento" name="descuento" placeholder="Codigo descuento" required/>
+                                    </div>
+                                    <div class="col-sm-2" >
+                                        <button class="btn btn-lg btn-secundary ">Aplicar</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <br/>
+                            <div  style="border-bottom: 1px solid black">
+                                <p>Subtotal</p>
+                                <p>Impuestos</p>
+                            </div>
+                            <br/>
+                            <div class="col">
+                                <p>Total</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
