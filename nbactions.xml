@@ -15,7 +15,7 @@
                 <exec.appArgs></exec.appArgs>
                 <exec.mainClass>com.Cartelera.CarteleraApplication</exec.mainClass>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>C:\Users\ajujargu\Downloads\Cartelera\Cartelera\src</exec.workingdir>
+                <exec.workingdir>K:\Cartelera</exec.workingdir>
             </properties>
         </action>
         <action>
