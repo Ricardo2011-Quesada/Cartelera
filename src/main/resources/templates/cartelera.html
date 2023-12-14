@@ -7,45 +7,7 @@
 
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" th:href="@{/}">
-                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/024/095/801/small_2x/cinema-film-tape-reel-free-png.png"
-                                         alt="Inicio" width="20" height="20"/> 
-                                    CinemaPlus
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/cartelera}">Peliculas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/Promociones}">Promociones</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/Dulceria}">Dulcería</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/CinePlus}">CinePlus+</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex">
-                            <div class="m-0 border-0" >
-                                <a class="btn "th:href="@{/Carrito}">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/4305/4305700.png"
-                                         alt="Inicio" width="20" height="20"/>                                     
-                                </a>
-                                <a class="btn btn-danger" th:href="@{/Registro}">Regitrarse</a>
-                                <a class="btn  btn-danger" th:href="@{/InicioSesion}">Iniciar sesion</a> 
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <header th:replace="layout/plantilla :: header"></header>
         <div class="navbar navbar-expand-lg" style="background-color: red; height:  80px"> 
         </div>
         <div class="navbar navbar-expand-lg" style="background-color: gray; height:  85px">\
@@ -59,56 +21,16 @@
         </div>
         <div class="container">
             <div class="h-75 d-flex align-items-center justify-content-center">
-                <div class="row">
+                <div class="row" th:each="pelicula: ${peliculas}">
                     <div class="col-sm-3">
                         <div class="card text-center" style="width: 18rem;">
-                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" class="card-img"/>
+                            <img th:src="${pelicula.ruta_imagen}" class="card-img"/>
                             <div class="card-body">
                                 <a th:href="@{/Horarios}" class="btn btn-danger">Horarios</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="h-75 d-flex align-items-center justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" class="card-img"/>
-                            <div class="card-body">
-                                <a th:href="@{/Horarios}" class="btn btn-danger">Horarios</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="h-75 d-flex align-items-center justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" class="card-img"/>
-                            <div class="card-body">
-                                <a th:href="@{/Horarios}" class="btn btn-danger">Horarios</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="h-75 d-flex align-items-center justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" class="card-img"/>
-                            <div class="card-body">
-                                <a th:href="@{/Horarios}" class="btn btn-danger">Horarios</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="h-75 d-flex align-items-center justify-content-center">
-                        <div class="card text-center" style="width: 18rem;">
-                            <img src="https://decopeques.com/wp-content/uploads/2016/04/cine-infantil-el-cazador-y-la-reina-del-hielo.jpg" class="card-img"/>
-                            <div class="card-body">
-                                <a th:href="@{/Horarios}" class="btn btn-danger">Horarios</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>             
             </div>
         </div>
     </body>

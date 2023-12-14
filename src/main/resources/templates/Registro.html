@@ -51,51 +51,50 @@
                                 </div>
                             </nav>
                         </header>
-                        <form style="padding-top: 25px">
+                        <form th:action="@{/guardarUsuario}" th:method="post" enctype="multipart/form-data" th:object="${usuario}" style="padding-top: 25px" class="needs-validation" novalidate>
+                            <input type="hidden" name="usuarioId" th:field="*{usuarioId}"/>
+                            <input type="hidden" name="estado" th:field="*{estado}" value="true"/>
                             <div class="row">
                                 <div class="col-lg">
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" required/>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}" required/>
                                 </div>
                                 <div class="col">
                                     <label for="apellidos">Apellidos</label>
-                                    <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos" th:field="*{apellidos}" required>
                                 </div>
                             </div>
                             <br/>
                             <div class="row">
                                 <div class="col">
                                     <label for="genero">Género</label>
-                                    <select class="form-control" id="genero" name="genero" required>
+                                    <select class="form-control" id="genero" name="genero" th:field="*{genero}" required>
                                         <option value="femenino">Femenino</option>
                                         <option value="masculino">Masculino</option>
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label for="documento">Documento de Identidad</label>
-                                    <input type="text" class="form-control" id="documento" name="documento" required/>
+                                    <input type="text" class="form-control" id="documento" name="documento" th:field="*{documentoIdentidad}" required/>
                                 </div>
                             </div>
                             <br/>
                             <div class="row">
                                 <div class="col">
                                     <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required/>
+                                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" th:field="*{fechaNacimiento}" required/>
                                 </div>
                                 <div class="col">
                                     <label for="correo">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="correo" name="correo" required/>
+                                    <input type="email" class="form-control" id="correo" name="correo" th:field="*{correoElectronico}" required/>
                                 </div>
                             </div>
                             <br/>
                             <label for="contrasena">Contraseña</label>
-                            <input type="password" class="form-control" id="contrasena" name="contrasena" required/>
-                            <br/>
-                            <label for="confirmarContrasena">Confirmar Contraseña</label>
-                            <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required/>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena" th:field="*{contrasena}" required/>
                             <br/>
                             <div class="text-center">
-                                <button class="btn btn-lg btn-danger">Activar</button>
+                                <button type="submit" id="submitButton" class="btn btn-lg btn-danger">Activar</button>
                             </div>
                         </form>
                     </div>
@@ -105,3 +104,19 @@
     </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script type="text/javascript">
+    var valido = false;
+    $("#submitButton").click(function (event) {
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                form.classList.add('was-validated')
+            } else {
+                valido = true;
+            }
+        });        
+    });
+</script>

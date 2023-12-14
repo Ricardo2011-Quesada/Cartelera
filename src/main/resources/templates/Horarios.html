@@ -7,45 +7,7 @@
 
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" th:href="@{/}">
-                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/024/095/801/small_2x/cinema-film-tape-reel-free-png.png"
-                                         alt="Inicio" width="20" height="20"/> 
-                                    CinemaPlus
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/cartelera}">Peliculas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/Promociones}">Promociones</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/Dulceria}">Dulcería</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/CinePlus}">CinePlus+</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex">
-                            <div class="m-0 border-0" >
-                                   <a class="btn "th:href="@{/Carrito}">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/4305/4305700.png"
-                                         alt="Inicio" width="20" height="20"/>                                     
-                                </a>
-                                <a class="btn btn btn-danger" th:href="@{/Registro}">Regitrarse</a>
-                                <a class="btn btn btn-danger" th:href="@{/InicioSesion}">Iniciar sesion</a> 
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+         <header th:replace="layout/plantilla :: header"></header>
         <div class="navbar navbar-expand-lg" style="background-color: red; height:  80px"> 
             <img src="../image/horario.png" width="100%" height="78px"/>          
         </div>
